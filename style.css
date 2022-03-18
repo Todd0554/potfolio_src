@@ -31,7 +31,7 @@ body {
   text-align: center;
 }
 
-.inher5, #cv-pdf .container embed, #blog .container .img, #blog .container .box1, #threecard .container .card img, #threecard .container, #competence .container {
+.inher5, #cv-pdf .container object, #blog .container .img, #blog .container .box1, #threecard .container .card img, #threecard .container, #competence .container {
   margin: auto;
   width: 100%;
 }
@@ -113,7 +113,7 @@ hr {
 @media screen and (min-width: 1000px) {
   @keyframes move1 {
     0% {
-      width: 20%;
+      width: 30%;
     }
     100% {
       width: 55%;
@@ -121,7 +121,7 @@ hr {
   }
   @keyframes move2 {
     0% {
-      width: 25%;
+      width: 35%;
     }
     100% {
       width: 65%;
@@ -429,7 +429,7 @@ hr {
   background: rgba(230, 230, 230, 0.3);
 }
 
-#cv-pdf .container embed {
+#cv-pdf .container object {
   height: 800px;
 }
 
