@@ -1,0 +1,442 @@
+/* basic web page setting */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  line-height: 1.4rem;
+}
+
+.inher1, #contact-info .container .table .send, #contact-info .container .table textarea, #contact-info .container .table input {
+  font-size: 1.2rem;
+  border: 1px solid grey;
+  border-radius: 5px;
+  color: aliceblue;
+}
+
+.inher2, #contact-info .container, #blog .container, #personal .container, #social-media .box, #navbar .container {
+  margin: auto;
+  max-width: 800px;
+}
+
+.inher3, #blog h1, #threecard .container h1, #personal .text h1, #first-page .position, #first-page .name {
+  font-family: "Mate SC", serif;
+  font-size: 1.8rem;
+}
+
+.inher4, #blog .container .box, #personal .text, #navbar ul li, #navbar h1 {
+  float: left;
+  text-align: center;
+}
+
+.inher5, #cv-pdf .container object embed, #blog .container .img, #blog .container .box1, #threecard .container .card img, #threecard .container, #competence .container {
+  margin: auto;
+  width: 100%;
+}
+
+hr {
+  border: none;
+  border-top: 5px dotted #cdcdcd;
+  height: 1px;
+  width: 50px;
+  margin: auto;
+}
+
+/* navbar for every page*/
+#navbar {
+  overflow: auto;
+  background-color: lightgray;
+  width: 100%;
+}
+
+#navbar .logo {
+  display: block;
+  width: 46px;
+  float: left;
+}
+
+#navbar a {
+  font-size: 0.9rem;
+  text-decoration: none;
+  color: #4b4b4b;
+}
+
+#navbar h1 {
+  display: block;
+  padding: 10px;
+}
+
+#navbar ul {
+  float: right;
+}
+
+#navbar ul li {
+  list-style: none;
+}
+
+#navbar ul li a {
+  display: block;
+  padding: 11px;
+}
+
+#navbar ul li a:hover {
+  background-color: #575757;
+  color: aliceblue;
+}
+
+#first-page {
+  width: 100%;
+  background: url("./img/pexels-mati-mango-6330644.jpg") no-repeat center center/cover;
+  height: 800px;
+}
+
+#first-page .name {
+  text-align: center;
+  padding-top: 8%;
+  color: aliceblue;
+  width: 55%;
+  animation: move1;
+  animation-duration: 2.5s;
+}
+
+#first-page .position {
+  text-align: center;
+  padding-top: 5%;
+  color: aliceblue;
+  width: 65%;
+  animation: move2;
+  animation-duration: 2.5s;
+}
+
+@media screen and (min-width: 1000px) {
+  @keyframes move1 {
+    0% {
+      width: 20%;
+    }
+    100% {
+      width: 55%;
+    }
+  }
+  @keyframes move2 {
+    0% {
+      width: 25%;
+    }
+    100% {
+      width: 65%;
+    }
+  }
+}
+#first-page h1 {
+  text-shadow: 6px 6px black;
+}
+
+@media screen and (max-width: 1040px) {
+  #first-page .name {
+    font-size: 0.9rem;
+    padding-top: 5%;
+  }
+
+  #first-page .position {
+    font-size: 0.9rem;
+    padding-top: 5%;
+  }
+
+  @keyframes move1 {
+    0% {
+      width: 40%;
+    }
+    100% {
+      width: 55%;
+    }
+  }
+  @keyframes move2 {
+    0% {
+      width: 55%;
+    }
+    100% {
+      width: 65%;
+    }
+  }
+}
+@media screen and (max-width: 350px) {
+  #first-page .name {
+    font-size: 0.7rem;
+    padding-top: 5%;
+  }
+
+  #first-page .position {
+    font-size: 0.7rem;
+    padding-top: 5%;
+  }
+
+  #navbar a {
+    font-size: 0.7rem;
+  }
+
+  @keyframes move1 {
+    0% {
+      width: 50%;
+    }
+    100% {
+      width: 55%;
+    }
+  }
+  @keyframes move2 {
+    0% {
+      width: 60%;
+    }
+    100% {
+      width: 65%;
+    }
+  }
+}
+#social-media {
+  height: 3%;
+  background: rgba(230, 230, 230, 0.3);
+}
+
+#social-media .box {
+  text-align: center;
+}
+
+#social-media a i {
+  font-size: 2rem;
+  color: #686868;
+  padding: 10px 30px 10px 30px;
+}
+
+#social-media a i:hover {
+  transition: 1.2s;
+  transform: rotate(360deg);
+}
+
+#competence {
+  background: url("./img/pexels-lumn-316466.jpg") no-repeat center center/cover;
+  width: 100%;
+  font-family: "Mate SC", serif;
+}
+
+#competence .container {
+  padding: 100px 0 100px 0;
+  text-align: center;
+}
+
+#competence .container h1 {
+  font-size: 2rem;
+  color: #373737;
+}
+
+#competence .container p {
+  font-size: 1.6rem;
+  padding: 30px 0;
+  line-height: 2.5rem;
+  color: #575757;
+}
+
+#competence .container a {
+  text-decoration: none;
+  color: grey;
+  font-size: 1.4rem;
+  border: 1px solid grey;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+#competence .container a:hover {
+  background-color: #717171;
+  color: aliceblue;
+}
+
+#personal {
+  height: 730px;
+  background: url("./img/pexels-fauxels-3183198.jpg") no-repeat center center/cover;
+  color: black;
+}
+
+#personal .container {
+  background: rgba(222, 222, 222, 0.5);
+  height: 730px;
+}
+
+#personal img {
+  width: 70%;
+  margin-top: 15px;
+  box-shadow: 5px 5px 20px black;
+}
+
+#personal .text {
+  margin-top: 20px;
+  padding: 10px;
+  width: 100%;
+  height: 300px;
+}
+
+#personal .text h1 {
+  padding-top: 8px;
+}
+
+#personal .text p {
+  font-size: 1.2rem;
+  font-family: "Mate SC", serif;
+  line-height: 1.7rem;
+}
+
+@media screen and (max-width: 670px) {
+  #personal .container {
+    height: 600px;
+  }
+
+  #personal {
+    height: 600px;
+  }
+}
+#threecard .container {
+  text-align: center;
+}
+
+#threecard .container h1 {
+  padding-top: 25px;
+  padding-bottom: 15px;
+}
+
+#threecard .container h2 {
+  padding-top: 10px;
+}
+
+#threecard .container .card {
+  display: inline-block;
+  margin: auto;
+  margin: 15px;
+  width: 31%;
+}
+
+#threecard img {
+  box-shadow: 5px 5px 10px black;
+}
+
+@media screen and (max-width: 1400px) {
+  #threecard .container .card {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  #threecard .container .card {
+    width: 80%;
+  }
+}
+#blog {
+  background: url("./img/pexels-wouter-de-jong-571169.jpg") no-repeat center center/cover fixed;
+  height: 1500px;
+}
+
+#blog h1 {
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+#blog p {
+  font-family: "Mate SC", serif;
+  font-size: 1.2rem;
+  padding-top: 8px;
+  color: #717171;
+}
+
+#blog .container .box1 {
+  display: inline-block;
+  text-align: center;
+  padding: 15px;
+}
+
+#blog .container .box {
+  display: inline-block;
+  width: 50%;
+  margin: auto;
+  padding: 15px;
+}
+
+#blog .container .img {
+  box-shadow: 5px 5px 10px black;
+}
+
+@media screen and (max-width: 770px) {
+  #blog .container .box {
+    width: 100%;
+  }
+
+  #blog {
+    height: 3300px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #blog .container .box {
+    width: 100%;
+  }
+
+  #blog {
+    height: 2700px;
+  }
+}
+#contact-info {
+  background: url("/img/pexels-hasan-albari-1229861.jpg") no-repeat center center/cover;
+  width: 100%;
+  height: 800px;
+  color: aliceblue;
+  font-family: "Mate SC", serif;
+}
+
+#contact-info .container {
+  padding: 10% 5% 15% 5%;
+}
+
+#contact-info h1 {
+  font-size: 2rem;
+  padding: 12px 0 12px 0;
+}
+
+#contact-info form {
+  font-size: 1.2rem;
+}
+
+#contact-info .container .table input {
+  width: 100%;
+  height: 1.8rem;
+  background: rgba(211, 211, 211, 0.3);
+}
+
+#contact-info .container .table textarea {
+  width: 100%;
+  height: 200px;
+  background: rgba(211, 211, 211, 0.3);
+}
+
+#contact-info .container .table .send {
+  width: 80px;
+  font-family: "Mate SC", serif;
+  text-decoration: none;
+  background: rgba(128, 128, 128, 0.5);
+  float: left;
+}
+
+#contact-info .container .table .send:hover {
+  background-color: aliceblue;
+  color: black;
+}
+
+#cv-pdf {
+  background: rgba(230, 230, 230, 0.3);
+}
+
+#cv-pdf .container object embed {
+  height: 800px;
+}
+
+footer {
+  background-color: lightgray;
+  color: #767676;
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */

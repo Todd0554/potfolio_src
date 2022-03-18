@@ -1,0 +1,525 @@
+/* basic web page setting */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    line-height: 1.4rem;
+}
+
+// Inheritance
+
+.inher1{
+    font-size: 1.2rem;
+    border: 1px solid grey;
+    border-radius: 5px;
+    color: aliceblue;
+}
+
+.inher2{
+    margin: auto;
+    max-width: 800px;
+}
+
+.inher3{
+    font-family: 'Mate SC', serif;
+    font-size: 1.8rem;
+}
+
+.inher4{
+    float: left;
+    text-align: center;
+}
+
+.inher5{
+    margin: auto;
+    width: 100%;
+}
+
+// The Thematic Break (Horizontal Rule) element
+hr {
+    border: none;
+    border-top: 5px dotted rgb(205, 205, 205);
+    height: 1px;
+    width: 50px;
+    margin: auto;
+}
+
+/* navbar for every page*/
+
+#navbar{
+    overflow: auto;
+    background-color: rgb(211, 211, 211); 
+    width: 100%;
+}
+#navbar .container{
+    @extend.inher2;
+}
+
+// logo on the left side
+
+#navbar .logo{
+    display: block;
+    width: 46px;
+    float: left;
+}
+
+// remove underscore of hyperlink and other basic setting of text
+
+#navbar a{
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: rgb(75, 75, 75);
+}
+
+#navbar h1{
+    display: block;
+    @extend.inher4;
+    padding: 10px;
+}
+#navbar ul{
+    float: right;
+}
+#navbar ul li{
+    list-style: none;
+    @extend.inher4;
+}
+#navbar ul li a{
+    display: block;
+    padding: 11px;
+}
+#navbar ul li a:hover{
+    background-color: rgb(87, 87, 87);
+    color: aliceblue;
+}
+
+// first-page section
+
+// basic background of index1
+
+#first-page{
+    width: 100%;
+    background: url('./img/pexels-mati-mango-6330644.jpg') no-repeat center center/cover;
+    height: 800px;
+}
+
+// my name with animation
+
+#first-page .name{
+    @extend.inher3;
+    text-align: center;
+    padding-top: 8%;
+    color: aliceblue;
+    width: 55%;
+    animation: move1;
+    animation-duration: 2.5s;
+}
+
+// position  with animation
+
+#first-page .position{
+    @extend.inher3;
+    text-align: center;
+    padding-top: 5%;
+    color: aliceblue;
+    width: 65%;
+    animation: move2;
+    animation-duration: 2.5s;
+}
+
+
+@media screen and (min-width:1000px){
+    @keyframes move1{
+        0%{
+            width: 20%
+        }
+        100%{
+            width: 55%;
+        }
+    }
+
+    @keyframes move2{
+        0%{
+            width: 25%
+        }
+        100%{
+        width: 65%;
+        }
+    }
+}
+
+// shadow of the text
+
+#first-page h1{
+    text-shadow: 6px 6px black;
+}
+
+// responsive settings
+
+@media screen and (max-width:1040px) {
+    #first-page .name{
+        font-size: 0.9rem;
+        padding-top: 5%;
+    }
+
+    #first-page .position{
+        font-size: 0.9rem;
+        padding-top: 5%;
+    }
+    @keyframes move1{
+        0%{
+            width: 40%
+        }
+        100%{
+            width: 55%;
+        }
+    }
+
+    @keyframes move2{
+        0%{
+            width: 55%
+        }
+        100%{
+        width: 65%;
+        }
+    }
+}
+
+@media screen and (max-width:350px) {
+    #first-page .name{
+        font-size: 0.7rem;
+        padding-top: 5%;
+    }
+
+    #first-page .position{
+        font-size: 0.7rem;
+        padding-top: 5%;
+    }
+    #navbar a{
+        font-size: 0.7rem;
+    }
+    @keyframes move1{
+        0%{
+            width: 50%
+        }
+        100%{
+            width: 55%;
+        }
+    }
+
+    @keyframes move2{
+        0%{
+            width: 60%
+        }
+        100%{
+        width: 65%;
+        }
+    }
+}
+
+// social media (linkedin ins github twitter) with hover rotation animation
+
+#social-media{
+    height: 3%;
+    background: transparentize($color: rgb(230, 230, 230), $amount: 0.7);
+}
+
+#social-media .box{
+    @extend.inher2;
+    text-align: center;
+}
+
+#social-media a i{
+    font-size: 2rem;
+    color: rgb(104, 104, 104);
+    padding: 10px 30px 10px 30px; 
+}
+
+#social-media a i:hover{
+    transition: 1.2s;
+    transform: rotate(360deg)   
+    }
+
+// competence section
+
+#competence{
+    background: url('./img/pexels-lumn-316466.jpg') no-repeat center center/cover;
+    width: 100%;
+    font-family: 'Mate SC', serif;
+}
+
+#competence .container{
+    @extend.inher5;
+    padding: 100px 0 100px 0;
+    text-align: center;
+}
+
+#competence .container h1{
+    font-size: 2rem;
+    color: rgb(55, 55, 55);
+}
+
+#competence .container p{
+    font-size: 1.6rem;
+    padding: 30px 0;
+    line-height: 2.5rem;
+    color: rgb(87, 87, 87);
+}
+
+// personal CV link as a button in PDF which can be downloaded
+
+#competence .container a{
+    text-decoration: none;
+    color: grey;
+    font-size: 1.4rem;
+    border: 1px solid grey;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+// hover of the PDF button
+
+#competence .container a:hover{
+    background-color: rgb(113, 113, 113);
+    color: aliceblue;
+}
+
+// character and hobbies
+
+#personal{
+    height: 730px;
+    background: url('./img/pexels-fauxels-3183198.jpg') no-repeat center center/cover;
+    color: rgb(0, 0, 0);
+}
+
+// transparent container
+
+#personal .container{
+    @extend.inher2;
+    background: transparentize($color: #dedede, $amount: 0.5);
+    height: 730px;
+}
+
+// img of me (here is Homer Simpson)
+
+#personal img{
+    width: 70%;
+    margin-top: 15px;
+    box-shadow: 5px 5px 20px black;
+}
+
+// personal introduction text
+
+#personal .text{
+    @extend.inher4;
+    margin-top: 20px;
+    padding: 10px;
+    width: 100%;
+    height: 300px;  
+}
+
+#personal .text h1{
+    @extend.inher3;
+    padding-top: 8px;
+}
+
+#personal .text p{
+    font-size: 1.2rem;
+    font-family: 'Mate SC', serif;
+    line-height: 1.7rem;
+}
+
+// responsive settings 
+
+@media screen and (max-width:670px) {
+    #personal .container{
+        height: 600px;
+    }
+    #personal{
+        height: 600px;
+    }
+}
+
+// three card section of my hobbies
+
+#threecard .container{
+    @extend.inher5;
+    text-align: center;
+}
+
+#threecard .container h1{
+    @extend.inher3;
+    padding-top: 25px;
+    padding-bottom: 15px;
+}
+
+#threecard .container h2{
+    padding-top: 10px;
+}
+#threecard .container .card{
+    display: inline-block;
+    margin: auto;
+    margin: 15px;
+    width: 31%;
+}
+
+#threecard .container .card img{
+    @extend.inher5;
+}
+
+#threecard img{
+    box-shadow: 5px 5px 10px black;
+}
+
+// responsive settings of three hobbies cards
+
+@media screen and (max-width:1400px) {
+    #threecard .container .card{
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    #threecard .container .card{
+        width: 80%;
+    }
+}
+
+// blog section
+
+#blog{
+    background: url('./img/pexels-wouter-de-jong-571169.jpg') no-repeat center center/cover fixed;
+    height: 1500px;
+}
+#blog .container{
+    @extend.inher2;
+}
+
+#blog h1{
+    @extend.inher3;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+#blog p{
+    font-family: 'Mate SC', serif;
+    font-size: 1.2rem;
+    padding-top: 8px;
+    color: rgb(113, 113, 113);
+}
+
+#blog .container .box1{
+    @extend.inher5;
+    display: inline-block;
+    text-align: center; 
+    padding: 15px; 
+}
+
+#blog .container .box{
+    @extend.inher4;
+    display: inline-block;
+    width: 50%;
+    margin: auto;
+    padding: 15px;
+}
+
+#blog .container .img{
+    @extend.inher5;
+    box-shadow: 5px 5px 10px black;
+}
+
+// responsive settings of blog section
+
+@media screen and (max-width:770px){
+    #blog .container .box{
+        width: 100%;
+    }
+    #blog{
+        height: 3300px;
+    }
+}
+
+@media screen and (max-width:500px){
+    #blog .container .box{
+        width: 100%;
+    }
+    #blog{
+        height: 2700px;
+    }
+}
+
+// contact info 
+
+#contact-info{
+    background: url('/img/pexels-hasan-albari-1229861.jpg') no-repeat center center/cover;
+    width: 100%;
+    height:800px;
+    color: aliceblue;
+    font-family: 'Mate SC', serif;
+}
+
+#contact-info .container{
+    padding: 10% 5% 15% 5%;
+    @extend.inher2;
+}
+
+#contact-info h1{
+    font-size: 2rem;
+    padding: 12px 0 12px 0;
+}
+
+#contact-info form{
+    font-size: 1.2rem;
+}
+
+// input and textarea
+
+#contact-info .container .table input{
+    @extend.inher1;
+    width: 100%;
+    height: 1.8rem;
+    background: transparentize($color: rgb(211, 211, 211), $amount: 0.7);
+}
+
+#contact-info .container .table textarea{
+    @extend.inher1;
+    width: 100%;
+    height: 200px;
+    background: transparentize($color: rgb(211, 211, 211), $amount: 0.7);
+}
+
+// message send button including hover
+
+#contact-info .container .table .send{
+    @extend.inher1;
+    width: 80px;
+    font-family: 'Mate SC', serif;
+    text-decoration: none;
+    background: transparentize($color: grey, $amount: 0.5);
+    float: left;
+}
+#contact-info .container .table .send:hover{
+    background-color: aliceblue;
+    color: black;
+}
+
+// personal cv pdf
+
+#cv-pdf{
+    background: transparentize($color: rgb(230, 230, 230), $amount: 0.7);
+}
+
+#cv-pdf .container object embed{
+    @extend.inher5;
+    height: 800px;
+}
+
+// footer section
+
+footer{
+    background-color: rgb(211, 211, 211);
+    color: rgb(118, 118, 118);
+    text-align: center;
+}
