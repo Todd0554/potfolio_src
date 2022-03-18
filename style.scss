@@ -511,7 +511,7 @@ hr {
     background: transparentize($color: rgb(230, 230, 230), $amount: 0.7);
 }
 
-#cv-pdf .container object embed{
+#cv-pdf .container embed{
     @extend.inher5;
     height: 800px;
 }

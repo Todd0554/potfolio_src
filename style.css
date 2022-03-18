@@ -31,7 +31,7 @@ body {
   text-align: center;
 }
 
-.inher5, #cv-pdf .container object embed, #blog .container .img, #blog .container .box1, #threecard .container .card img, #threecard .container, #competence .container {
+.inher5, #cv-pdf .container embed, #blog .container .img, #blog .container .box1, #threecard .container .card img, #threecard .container, #competence .container {
   margin: auto;
   width: 100%;
 }
@@ -429,7 +429,7 @@ hr {
   background: rgba(230, 230, 230, 0.3);
 }
 
-#cv-pdf .container object embed {
+#cv-pdf .container embed {
   height: 800px;
 }
 
