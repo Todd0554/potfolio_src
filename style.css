@@ -1,6 +1,7 @@
 /* basic web page setting */
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
@@ -9,29 +10,29 @@ body {
   line-height: 1.4rem;
 }
 
-.inher1, #contact-info .container .table .send, #contact-info .container .table textarea, #contact-info .container .table input {
+.inher1, #contact-info .container .table input, #contact-info .container .table textarea, #contact-info .container .table .send {
   font-size: 1.2rem;
   border: 1px solid grey;
   border-radius: 5px;
   color: aliceblue;
 }
 
-.inher2, #contact-info .container, #blog .container, #personal .container, #social-media .box, #navbar .container {
+.inher2, #navbar .container, #social-media .box, #personal .container, #blog .container, #contact-info .container {
   margin: auto;
   max-width: 800px;
 }
 
-.inher3, #blog h1, #threecard .container h1, #personal .text h1, #first-page .position, #first-page .name {
-  font-family: "Mate SC", serif;
+.inher3, #first-page .name, #first-page .position, #personal .text h1, #threecard .container h1, #blog h1 {
+  font-family: 'Mate SC', serif;
   font-size: 1.8rem;
 }
 
-.inher4, #blog .container .box, #personal .text, #navbar ul li, #navbar h1 {
+.inher4, #navbar h1, #navbar ul li, #personal .text, #blog .container .box {
   float: left;
   text-align: center;
 }
 
-.inher5, #cv-pdf .container object, #blog .container .img, #blog .container .box1, #threecard .container .card img, #threecard .container, #competence .container {
+.inher5, #competence .container, #threecard .container, #threecard .container .card img, #blog .container .box1, #blog .container .img, #cv-pdf .container object {
   margin: auto;
   width: 100%;
 }
@@ -89,7 +90,7 @@ hr {
 #first-page {
   width: 100%;
   background: url("./img/pexels-mati-mango-6330644.jpg") no-repeat center center/cover;
-  height: 800px;
+  height: 900px;
 }
 
 #first-page .name {
@@ -97,8 +98,10 @@ hr {
   padding-top: 8%;
   color: aliceblue;
   width: 55%;
-  animation: move1;
-  animation-duration: 2.5s;
+  -webkit-animation: move1;
+          animation: move1;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
 }
 
 #first-page .position {
@@ -106,17 +109,35 @@ hr {
   padding-top: 5%;
   color: aliceblue;
   width: 65%;
-  animation: move2;
-  animation-duration: 2.5s;
+  -webkit-animation: move2;
+          animation: move2;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
 }
 
 @media screen and (min-width: 1000px) {
+  @-webkit-keyframes move1 {
+    0% {
+      width: 30%;
+    }
+    100% {
+      width: 55%;
+    }
+  }
   @keyframes move1 {
     0% {
       width: 30%;
     }
     100% {
       width: 55%;
+    }
+  }
+  @-webkit-keyframes move2 {
+    0% {
+      width: 35%;
+    }
+    100% {
+      width: 65%;
     }
   }
   @keyframes move2 {
@@ -128,6 +149,7 @@ hr {
     }
   }
 }
+
 #first-page h1 {
   text-shadow: 6px 6px black;
 }
@@ -137,18 +159,32 @@ hr {
     font-size: 0.9rem;
     padding-top: 5%;
   }
-
   #first-page .position {
     font-size: 0.9rem;
     padding-top: 5%;
   }
-
+  @-webkit-keyframes move1 {
+    0% {
+      width: 40%;
+    }
+    100% {
+      width: 55%;
+    }
+  }
   @keyframes move1 {
     0% {
       width: 40%;
     }
     100% {
       width: 55%;
+    }
+  }
+  @-webkit-keyframes move2 {
+    0% {
+      width: 55%;
+    }
+    100% {
+      width: 65%;
     }
   }
   @keyframes move2 {
@@ -160,27 +196,41 @@ hr {
     }
   }
 }
+
 @media screen and (max-width: 350px) {
   #first-page .name {
     font-size: 0.7rem;
     padding-top: 5%;
   }
-
   #first-page .position {
     font-size: 0.7rem;
     padding-top: 5%;
   }
-
   #navbar a {
     font-size: 0.7rem;
   }
-
+  @-webkit-keyframes move1 {
+    0% {
+      width: 50%;
+    }
+    100% {
+      width: 55%;
+    }
+  }
   @keyframes move1 {
     0% {
       width: 50%;
     }
     100% {
       width: 55%;
+    }
+  }
+  @-webkit-keyframes move2 {
+    0% {
+      width: 60%;
+    }
+    100% {
+      width: 65%;
     }
   }
   @keyframes move2 {
@@ -192,6 +242,7 @@ hr {
     }
   }
 }
+
 #social-media {
   height: 3%;
   background: rgba(230, 230, 230, 0.3);
@@ -208,14 +259,16 @@ hr {
 }
 
 #social-media a i:hover {
+  -webkit-transition: 1.2s;
   transition: 1.2s;
-  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
 }
 
 #competence {
   background: url("./img/pexels-lumn-316466.jpg") no-repeat center center/cover;
   width: 100%;
-  font-family: "Mate SC", serif;
+  font-family: 'Mate SC', serif;
 }
 
 #competence .container {
@@ -263,7 +316,8 @@ hr {
 #personal img {
   width: 70%;
   margin-top: 15px;
-  box-shadow: 5px 5px 20px black;
+  -webkit-box-shadow: 5px 5px 20px black;
+          box-shadow: 5px 5px 20px black;
 }
 
 #personal .text {
@@ -279,7 +333,7 @@ hr {
 
 #personal .text p {
   font-size: 1.2rem;
-  font-family: "Mate SC", serif;
+  font-family: 'Mate SC', serif;
   line-height: 1.7rem;
 }
 
@@ -287,11 +341,11 @@ hr {
   #personal .container {
     height: 600px;
   }
-
   #personal {
     height: 600px;
   }
 }
+
 #threecard .container {
   text-align: center;
 }
@@ -313,7 +367,8 @@ hr {
 }
 
 #threecard img {
-  box-shadow: 5px 5px 10px black;
+  -webkit-box-shadow: 5px 5px 10px black;
+          box-shadow: 5px 5px 10px black;
 }
 
 @media screen and (max-width: 1400px) {
@@ -321,11 +376,13 @@ hr {
     width: 45%;
   }
 }
+
 @media screen and (max-width: 1000px) {
   #threecard .container .card {
     width: 80%;
   }
 }
+
 #blog {
   background: url("./img/pexels-wouter-de-jong-571169.jpg") no-repeat center center/cover fixed;
   height: 1500px;
@@ -338,7 +395,7 @@ hr {
 }
 
 #blog p {
-  font-family: "Mate SC", serif;
+  font-family: 'Mate SC', serif;
   font-size: 1.2rem;
   padding-top: 8px;
   color: #717171;
@@ -358,33 +415,34 @@ hr {
 }
 
 #blog .container .img {
-  box-shadow: 5px 5px 10px black;
+  -webkit-box-shadow: 5px 5px 10px black;
+          box-shadow: 5px 5px 10px black;
 }
 
 @media screen and (max-width: 770px) {
   #blog .container .box {
     width: 100%;
   }
-
   #blog {
     height: 3300px;
   }
 }
+
 @media screen and (max-width: 500px) {
   #blog .container .box {
     width: 100%;
   }
-
   #blog {
     height: 2700px;
   }
 }
+
 #contact-info {
   background: url("/img/pexels-hasan-albari-1229861.jpg") no-repeat center center/cover;
   width: 100%;
-  height: 800px;
+  height: 900px;
   color: aliceblue;
-  font-family: "Mate SC", serif;
+  font-family: 'Mate SC', serif;
 }
 
 #contact-info .container {
@@ -414,7 +472,7 @@ hr {
 
 #contact-info .container .table .send {
   width: 80px;
-  font-family: "Mate SC", serif;
+  font-family: 'Mate SC', serif;
   text-decoration: none;
   background: rgba(128, 128, 128, 0.5);
   float: left;
@@ -438,5 +496,4 @@ footer {
   color: #767676;
   text-align: center;
 }
-
 /*# sourceMappingURL=style.css.map */
